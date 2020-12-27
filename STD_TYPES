@@ -1,0 +1,62 @@
+#ifndef _STD_TYPES_
+#define _STD_TYPES_
+
+typedef unsigned char u8;
+typedef signed   char s8;
+
+typedef unsigned short int u16;
+typedef signed short int s16;
+
+typedef unsigned long int u32;
+typedef signed long int s32;
+
+typedef float f32;
+typedef double f64;
+typedef long double f96;
+
+
+typedef unsigned char       u8;
+typedef signed char         s8;
+typedef unsigned short int u16;
+typedef signed short int   s16;
+typedef unsigned long int  u32;
+typedef signed long int    s32;
+typedef float              f32;
+typedef double             f64;
+typedef long double        f128;
+
+
+typedef unsigned char       u8;
+typedef signed char         s8;
+typedef unsigned short int u16;
+typedef signed short int   s16;
+typedef unsigned long int  u32;
+typedef signed long int    s32;
+typedef float              f32;
+typedef double             f64;
+typedef long double        f128;
+
+typedef struct node
+{
+	s32 Info;
+    char gender ; 
+    s32 age ; 
+    char * name [10] ; 
+	struct node * Link;
+}Node;
+
+Node * CreateList         (Node * Start);
+void   DisplayList        (Node * Start);
+u8    find         (Node * Start,u8 id);
+void   Search             (Node * Start,s32 x);
+Node * InsertInBeginning  (Node * Start,s32 Data);
+void   InsertAtEnd        (Node * Start, s32 Data);
+void   InsertAfter        (Node * Start,s32 x,s32 Data);
+Node * InsertBefore       (Node * Start,s32 x,s32 Data);
+Node * InsertAtPosition   (Node * Start,s32 Data,s32 Pos);
+Node * DeleteNode         (Node * Start,s32 Data);
+Node * ReverseList        (Node * Start);
+Node * get_pointer(Node *Start,u8 id); 
+
+
+#endif 
